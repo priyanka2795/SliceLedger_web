@@ -1,0 +1,161 @@
+.fiat_wallet_section{
+    float: left;
+    width: 80%;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+
+    .fiat_content{
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+        .total_wallet_balance_div{
+            .total_wallet_balance_title{
+                color: #605e5e;
+                font-size: 14px;
+            }
+            .total_wallet_balance{
+                font-size: 1.5rem;
+                font-weight: 500;
+                   span{
+                    color: gray;
+                    font-size: 1.6rem;
+                   }
+            }
+        }
+        .fiat_wallet_btn{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: flex-end;
+              .wallet_btn{
+                  margin-top: 5px;
+                    button{
+                        background: transparent;
+                        border: 1px solid black;
+                        border-radius: 3px;
+                        font-size: 13px;
+                        padding: 7px 9px;
+                        font-weight: 500;
+
+                        @media screen and (max-width:420px){
+                          font-size: 9px;
+                        }
+                    }
+              }
+        }
+    }
+    .fiat_deposit_withdraw_history{
+        margin-top: 30px;
+          .fiat_deposit_withdraw_history_title{
+            color: #605e5e;
+            font-size: 14px;
+          }
+          .fiat_deposit_withdraw_history_table{
+              table{
+                margin-top: 12px;
+                  thead{
+                      tr{
+                          th{
+                            font-size: 13px;
+                            color: gray;
+                            font-weight: 500;
+                            width: 25%;
+                          }
+                      }
+                  }
+              }
+              .fiat_amount{
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  .amount_icon{
+                    width: 30px;
+                    border-radius: 50px;
+                    height: 30px;
+                    background: #0db052;
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 4px;
+                    color: #fff;
+                     span{
+                        margin-right: -4px;
+                        margin-top: 2px;
+                     }
+                  }
+                  .amount_price{
+                    font-size: 14px;
+                    font-weight: 600;
+                  }
+              }
+              .fiat_action{
+                  .text{
+                      color: #0db052;
+                      font-size: 15px;
+                  }
+              }
+
+              .fiat_action_with{
+                .text{
+                    color: #e5633b;
+                    font-size: 15px;
+                }
+              }
+              .fiat_date_time{
+                  .date{
+                      color: gray;
+                      font-size: 15px;
+                  }
+              }
+              .fiat_status{
+                  .status_title_failed{
+                    color: #ea4a4a;
+                    font-size: 15px;
+                  }
+                  .status_title_completed{
+                    color: #0db052;
+                    font-size: 15px;
+                  }
+                  .status_title_pending{
+                    color: #dfae0c;
+                    font-size: 15px;
+                  }
+                  .status_title_cancelled{
+                    color: #df0c0c;
+                    font-size: 15px;
+                  }
+                  .status_text{
+                    font-size: 12px;
+                    color: gray;
+                    text-transform: capitalize;
+                  }
+              }
+          }
+    }
+    /* ===================================================== Token Pagination styling ======================================================= */
+ .page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #4a5cd8 !important;
+  border-color: #c3ccf3 !important;
+}
+
+ .page-link {
+  color: #131212 !important;
+  /* font-weight: 600; */
+}
+
+ .page-link:hover {
+  color: #131212 !important;
+}
+
+ .page-link:focus {
+  box-shadow: 0 0 0 0.25rem #c3ccf3 !important;
+}
+
+
+ }
+
+
+

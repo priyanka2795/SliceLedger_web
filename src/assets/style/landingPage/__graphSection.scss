@@ -1,0 +1,59 @@
+@import '../utility/colors.scss'; 
+
+.slice_graphSection{
+    // background-image: linear-gradient(44deg, #020d41, #00134b);
+    // background-size: cover;
+    background: #07071c;
+    padding: 100px 0px;
+
+    .slice_graph_content_div{
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .slice_graph_contents{
+
+            .tokenomics_text{
+                color: #E946DA;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            h2{
+                color: $commonText;
+                background: -webkit-linear-gradient(45deg, #e6e6e8, #ffffff);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                width: fit-content;
+                font-weight: 600;
+                font-size: 3em;
+                @media screen and (max-width:992px) {
+                    font-size: 2em;
+                }
+            }
+
+            p{
+                color: #f2f2f2;
+                font-weight: 200;
+                line-height: 1.5;
+            }
+
+            button{
+                padding: 5px 30px;
+                background: linear-gradient(45deg, #477BFF, #00B19D);
+                border-radius: 25px;
+                border: 2px solid #33BEED;
+                color: $commonText;
+                text-shadow: 0px 0px 15px #000;
+                letter-spacing: .8px;
+                transition: all .5s;
+
+                &:hover{
+                    background: transparent;
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+}

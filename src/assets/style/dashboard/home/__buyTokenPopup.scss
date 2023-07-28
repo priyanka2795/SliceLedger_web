@@ -1,0 +1,101 @@
+.slice_buyToken_section {
+    padding: 20px;
+    background: #f7f9fc;
+    .buyToken_balance {
+        text-align: center;
+
+        .buyToken_text {
+            letter-spacing: 0px;
+            color: #778da9;
+        }
+
+        .buyToken_value {
+            font-weight: bold;
+        }
+
+        p {
+            letter-spacing: 0px;
+            color: #778da9;
+            font-size: 14px;
+        }
+    }
+
+    .buyToken_user_amount {
+        .buyToken_rupees {
+            margin-bottom: 10px;
+            label {
+                letter-spacing: 0px;
+                font-size: 14px;
+            }
+        }
+        .buyToken_SLC {
+            margin-bottom: 10px;
+            label {
+                letter-spacing: 0px;
+                font-size: 14px;
+            }
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            padding: 6px;
+            box-shadow: 0px 0px 5px 5px rgb(131 151 177 / 36%);
+            border-radius: 5px;
+            margin: 10px 0px;
+
+            &::-webkit-inner-spin-button {
+                display: none;
+            }
+
+            &:focus-within {
+                outline: none;
+                box-shadow: 0px 0px 5px 3px rgb(0 170 106 / 35%);
+            }
+
+            &::placeholder{
+                color: #778da9;
+                font-size: 14px;
+                font-style: italic;
+            }
+        }
+    }
+
+    .buyToken_btn {
+        .insufficient_balance_error {
+            display: flex;
+            align-items: center;
+            border: 2px solid #ff5959;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #f1d9d9;
+
+            .exclamation_mark_icon {
+                padding: 10px;
+                svg {
+                    font-size: 28px;
+                    color: #ea3943;
+                }
+            }
+
+            .error_message {
+                color: #ea3943;
+                letter-spacing: 0px;
+                font-size: 14px;
+            }
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            background-color: #08c18d;
+            padding: 10px;
+            color: #ffffff;
+            border: none;
+        }
+    }
+}

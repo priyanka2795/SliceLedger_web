@@ -1,0 +1,107 @@
+.transfer_payment_steps{
+        margin:40px 0px ;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+
+        .payment_step{
+            border: 1px solid #e3e0e0;
+            padding: 20px;
+
+            .payment_step1{
+                .title{
+                    color: #525ace;
+                    font-weight: 600;
+                    font-size: 17px;
+                }
+                .head{
+                    h6{
+                        padding-top: 10px;
+                    }
+                }
+                .text{
+                    font-size: 13px;
+                    color: gray;
+                }
+
+                .transfer_payment_account_details{
+                    padding-top: 10px;
+
+                    .account_details{
+                        table{
+                            th{
+                                font-size: 13px;
+                            }
+                            td{
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .payment_step2{
+                .title{
+                    color: #525ace;
+                    font-weight: 600;
+                    font-size: 17px;
+                }
+                .head{
+                    h6{
+                        padding-top: 10px;
+                    }
+                }
+                .transactionId_input{
+                    input{
+                        border-radius: 0rem;
+
+                        &:focus{
+                            box-shadow: none;
+                            border-color: #111;
+                        }
+                    }
+                    .btn-success{
+                        padding: 6px 50px;
+                        background-color: #08c18d;
+                        border-color: #08c18d;
+        
+                        a{
+                            color: #fff;
+                            text-decoration: none;
+                        }
+        
+                        &:hover{
+                            background-color: #08c18d !important;
+                            border-color: #08c18d !important;
+                        }
+        
+                        &:focus{
+                            box-shadow: 0 0 0 0.25rem rgb(38 224 138 / 50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .transfer_payment_note{
+            margin-top: 20px;
+            border: 1px solid #e3e0e0;
+            padding: 20px;
+            background: #f8f6df;
+
+            .title{
+                font-weight: 600;
+                color: #ef3d29;
+                font-size: 17px;
+            }
+            .text{
+                p{
+                    font-size: 13px;
+                    color: #3e3d3d;
+                    margin-bottom: 0rem;
+                    font-weight: 500;
+                }
+            }
+        }
+}

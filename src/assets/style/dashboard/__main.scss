@@ -1,0 +1,32 @@
+@import './common/_header';
+@import './common/_sidenavbar';
+
+@import './home/_dashhome';
+@import './home/_wallet';
+@import './home/_withdrawalPopup';
+@import './home/_addFundPopup';
+@import './home/_viewDetailsPopup';
+@import './home/_buyTokenPopup';
+@import './home/_feedback';
+@import './home/_security';
+@import './home/_transaction_history';
+
+@import './user_profile/_userProfileHome';
+@import './user_profile/_user_changePwd';
+@import './user_profile/_userAccountSetting';
+@import './user_profile/_user_account_details';
+@import './user_profile/_user_kyc_varification';
+@import './user_profile/_disable_account';
+
+@import './wallet/_transaction_list';
+@import './wallet/_sliceWallet';
+@import './wallet/_fiatWallet';
+@import './wallet/_internalTransfer';
+@import './wallet/_payment_method';
+@import './wallet/_transferPayment';
+
+@import './common/_footer';
+
+// body{
+//    overflow: hidde;
+// }

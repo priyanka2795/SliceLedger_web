@@ -1,0 +1,241 @@
+@import "../../utility/colors.scss";
+
+@mixin signUp_login {
+    border: 2px solid #33beed;
+    border-radius: 25px;
+    padding: 5px 30px;
+}
+
+.slice_dash_header {
+    .slice_Nav {
+        // background: $navBg;
+        height: 70px;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0px 5px 50px rgb(70 93 223 / 30%);
+
+        .nav-bar{
+            display: flex;
+            justify-content: space-between;
+
+            .logo{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 312px;
+                @media (min-width:280px) and (max-width:320px){
+                    width: 206px;
+                }
+
+                .toggle{
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                }
+            }
+        }
+        .profile_pic_link {
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+                box-shadow: 0px 0px 7px 0px #8c8fb9;
+                @media screen and (max-width:767px){
+                    width: 45px;
+                    height: 45px;
+                    object-fit: cover;
+                }
+            }
+
+            .profile_card {
+                cursor: default;
+                z-index: 99;
+                width: 240px;
+                position: absolute;
+                top: 66px;
+                right: 0px;
+                background-color: #fff;
+                box-shadow: 0px 0px 7px 0px #8c8fb9;
+
+
+                .profile_card_top {
+                    background: linear-gradient(135deg, #435fe0, #8039ca);
+                    text-align: center;
+                    padding: 30px;
+
+                    img{
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    h5{
+                        margin-top: 5px;
+                        margin-bottom: 0px;
+                        color: #ffffff;
+                    }
+
+                    em{
+                        color: #ffffff;
+                        font-size: 12px;
+                    }
+                }
+
+                .profile_card_bottom{
+                    ul{
+                        list-style-type: none;
+                        padding: 0px;
+
+                        li{
+                            border-top: 1px dotted #e2eaf9;
+                            padding: 8px 10px;
+                         
+
+                            .menu{
+                                display: flex;
+                                padding-left: 20px;
+                                font-size: 13px;
+    
+                                .title{
+                                    padding-left: 10px;
+                                }
+                            }
+                        }
+                       
+                    }
+                }
+            }
+        }
+
+        .slice_link_div {
+            align-items: center;
+
+            .signUp {
+                @include signUp_login;
+                &:hover {
+                    background: linear-gradient(45deg, #477bff, #00b19d);
+                }
+            }
+            .login {
+                @include signUp_login;
+                &:hover {
+                    background: linear-gradient(45deg, #477bff, #00b19d);
+                    color: #ffffff;
+                }
+            }
+            .logout {
+                background: linear-gradient(135deg, #435fe0, #8039ca);
+                padding: 5px 20px;
+                color: #ffffff;
+                box-shadow: 0px 0px 7px 0px #8c8fb9;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(0.9);
+                }
+            }
+            .nav-link.slice_navLink {
+                // bootstrap class
+                // color: $navText;
+                margin: 0px 5px;
+                // font-weight: 300;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0%;
+                    width: 100%;
+                    height: 1px;
+                    background-color: aqua;
+                    transform: translateX(-150%);
+                    transition: all 0.5s;
+                }
+
+                &:hover::before {
+                    transform: translateX(-10%);
+                }
+            }
+
+            .nav-link {
+                // bootstrap class
+                // color: $navText;
+                margin: 0px 5px;
+                // font-weight: 300;
+            }
+        }
+    }
+
+    .dropdown-item {
+        color: #686a6c;
+
+        a {
+            color: #6e6f70;
+            text-decoration: none;
+        }
+    }
+    .profile_title,
+    .account_setting_title,
+    .security_title {
+        margin-left: 7px;
+    }
+
+
+}
+
+.offcanvas-start {
+    top: 0;
+    left: 0;
+    width: 271px !important;
+}
+.offcanvas-header {
+    background: linear-gradient(135deg, #435fe0, #5d55c1) !important;
+}
+.offcanvas-body {
+    background: linear-gradient(135deg, #435fe0, #764ba2) !important;
+    .sideNav_body {
+        .sideNav_menu {
+            .menu {
+                display: flex;
+
+                .menu_icon {
+                    display: block;
+                    margin-top: auto;
+                    margin-bottom: auto;
+
+                    svg {
+                        color: #fff;
+                    }
+                }
+            }
+            ul {
+                margin-top: 24px;
+                li {
+                    list-style: none;
+                    padding: 0px 20px;
+                    &:hover {
+                        background: hsla(0, 0%, 100%, 0.09);
+                        margin-right: 20px;
+                        padding: 0px 20px;
+                        border-radius: 5px;
+                    }
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 13px;
+                        line-height: 3;
+                        margin-left: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

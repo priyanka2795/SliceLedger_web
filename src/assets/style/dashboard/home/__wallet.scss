@@ -1,0 +1,231 @@
+@import '../../utility/colors.scss';
+
+@mixin btn($bg, $border, $text) {
+    background-color: $bg;
+    border: 1px solid $border;
+    padding: 5px 20px;
+    color: $text;
+    text-decoration: none;
+    width:100%; 
+    text-align: center;
+    margin: 0px 4px;
+    border-radius: 3px;
+}
+
+.slice_wallet_section{
+    float: left;
+    width: 80%;
+    height: 100vh;
+    overflow-y: scroll;
+        padding: 50px 0px;
+        background-color: #e4e3ef;
+        .flat_card{
+            
+        }
+
+    .slice_flat_wallet{
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 5px 7px 12px -5px #9f9fbb;
+        border-radius: 3px;
+        margin: 22px 0px 0px 0px;
+
+        .flat_wallet_head{
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .flat_wallet_subHead{
+            font-size: 13px;
+            color: #5965f9;
+            font-weight: 600;
+        }
+
+        .withdraw_input_field{
+            margin-top: 8px;
+            label{
+                font-size: 14px;
+                color: #596882;
+                padding-bottom: 4px;
+            }
+            .amount_input{
+                input{
+                    border-radius: 0rem;
+                    height: 32px;
+
+                    &::-webkit-inner-spin-button {
+                        display: none;
+                    }
+
+                    &:focus{
+                        border-color: #ced4da;
+                        box-shadow: none;
+                    }
+                }
+                .input-group-text{
+                    border-radius: 0rem;
+                    font-size: 14px;
+                    color: #596882;
+                    width: 80px;
+                    height: 32px;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .flat_wallet_total_balance{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 13px;
+
+            .flat_wallet_total_title{
+                display: flex;
+
+                svg{
+                    font-size: 1.1em;
+                    margin:0px 5px 1px 1px;
+                    color: #596882;
+                }
+
+                h6{
+                    letter-spacing: 0px;
+                    color: #596882;
+                    font-size: 14px;
+                }
+            }
+
+            .flat_wallet_total_value{
+                    text-align: end;
+
+                h6{
+                    letter-spacing: 0px;
+                    margin-bottom: 0px;
+                    font-weight: 500;
+                    color: #808a9d;
+                    font-size: 14px;
+                }
+
+                .flat_wallet_total_value_text{
+                    font-weight: bold;
+                    color: #808a9d;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .flat_wallet_amount_comparison{
+
+            ul{
+                list-style-type: none;
+
+                li{
+
+                    .wallet_amount_currency_value{
+                        display: flex;
+                        color: #808a9d;
+
+                        .currency_name{
+                            font-weight: bold;
+                            margin-right: 10px;
+                            font-size: 13px;
+                        }
+                        .currency_value{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .flat_wallet_Btn{
+            display: flex;
+
+            .add_fund_btn{
+                @include btn(#5965f9, #5965f9, #ffffff)
+            }
+
+            .withdraw_btn{
+                @include btn(#08c18d, #08c18d, #ffffff)
+            }
+        }
+
+    }
+
+    .slice_transaction_history{
+
+        h5{
+            font-weight: bold;
+        }
+
+        ul{
+            list-style-type: none;
+            max-height: 655px;
+            overflow-y: scroll;
+            margin-top: 24px;
+            padding: 0px;
+            box-shadow: 5px 7px 12px -5px #9f9fbb;
+            border-radius: 5px;
+
+            &::-webkit-scrollbar{
+                width: 8px;
+            }
+            &::-webkit-scrollbar-track{
+                border-radius: 25px;
+                background-color: #9f9fbb;
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: #5965f9;
+                border-radius: 25px;
+            }
+            li{
+                padding: 10px 10px;
+                background-color: #f5f5ff;
+
+                &:nth-child(even){
+                    background-color: #ffffff;
+                }
+
+                .transaction_history_details{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .transaction_history_text{
+                        .head{
+                            font-size: 15px;
+                        }
+                        button{
+                            background: transparent;
+                            font-size: 11px;
+                            border: none;
+                            color: #5965f9;
+                        }
+                    }
+
+                    .transaction_history_amount{
+                        text-align: end;
+
+                        .amount_text{
+                            font-weight: 500;
+                            font-size: 15px;
+                        }
+
+                        .status{
+                            background-color: #ff5959;
+                            border-radius: 5px;
+                            padding: 1px 10px;
+                            color: #ffffff;
+                            font-size: .60em;
+                        }
+                        .status.completed{
+                            background-color: #08c18d;
+                        }
+                    }
+                }
+            }
+        }
+
+     
+    }
+}

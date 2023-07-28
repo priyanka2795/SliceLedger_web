@@ -1,0 +1,22 @@
+.slice_viewDetails_section{
+
+    .deposit_amount{
+        text-align: center;
+        margin: 20px 0px;
+
+        .deposit_text{
+            color: #778DA9;
+            font-size: 1.3em;
+        }
+
+        .deposit_value{
+            font-weight: bold;
+        }
+    }
+
+    .deposit_details{
+        font-size: 13px;
+        color: #778DA9;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,91 @@
+.payment_method_section{
+    // float: left;
+    // width: 80%;
+    height:calc(100vh - 70px);
+    overflow-y: scroll;
+
+    .payment_content{
+        margin: 50px 0px;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+
+        .available_balance_div{
+            font-weight: 500;
+            color: #08c18d;
+
+            .amount{
+                font-weight: 700;
+            }
+        }
+        .select_method{
+            margin-top: 20px;
+            .razorPay{
+                display: flex;
+
+                .razorPay_input{
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+                .razorPay_image{
+                    img{
+                        width: 120px;
+                        margin-left: 14px;
+                    }
+                    .payment_limit{
+                        font-size: 12px;
+                        margin-left: 14px;
+                        color: gray;
+                    }
+                }
+            }
+            .transfer_bank{
+                display: flex;
+                margin-top: 20px;
+
+                
+                .transfer_bank_image{
+                  
+                    .bank_icon{
+                        display: flex;
+                        svg{
+                            font-size: 1.4rem;
+                            margin-left: 14px;
+                        }
+                    }
+                    .title{
+                        font-weight: 500;
+                        margin-left: 8px;
+                    }
+                    .payment_limit{
+                        color: gray;
+                        font-size: 12px;
+                        margin-left: 14px;
+                    }
+
+                }
+            }
+        }
+
+        .payment_continue_btn{
+            margin-top: 10px;
+            display: flex;
+            justify-content: end;
+
+            .btn-success{
+                padding: 6px 50px;
+                background-color: #08c18d;
+                border-color: #08c18d;
+
+                &:hover{
+                    background-color: #08c18d !important;
+                    border-color: #08c18d !important;
+                }
+
+                &:focus{
+                    box-shadow: 0 0 0 0.25rem rgb(38 224 138 / 50%);
+                }
+            }
+        }
+    }
+}

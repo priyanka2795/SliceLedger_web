@@ -1,0 +1,95 @@
+@import '../utility/colors.scss'; 
+
+@mixin signUp_login {
+                border-radius: 25px;
+                padding: 5px 30px;
+                background-image: linear-gradient(45deg, #E946DA, #9625E0);;
+}
+
+.slice_header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    
+    .slice_Nav{
+        background: #12122c;
+        padding: 20px 10px;
+
+        .navbar-brand{ // bootstrap class
+            color: $navLogo;
+            img{
+                @media (min-width:270px) and (max-width:280px){
+                    width: 21px !important;
+                }
+            }
+        }
+        .navbar-toggler-icon{
+            background-image: url("../../images/toggle_bar.png");
+        }
+        .navbar-nav{
+            @media (min-width:992px) and (max-width:1180px){
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+        }
+        .slice_link_div{
+            align-items: center;
+
+          
+
+            .signUp{
+                @include signUp_login;
+                &:hover{
+                    background: linear-gradient(45deg, #9625E0, #E946DA);
+                }
+            }
+            .login{
+                @include signUp_login;
+                &:hover{
+                    background: linear-gradient(45deg, #9625E0, #E946DA);
+                }
+            }
+            .nav-link.slice_navLink{ // bootstrap class
+                color: $navText;
+                margin: 0px 5px;
+                font-weight: 300;
+                position: relative;
+                overflow: hidden;
+                font-size: 15px;
+                 @media screen and (max-width:992px) {
+                    overflow: visible; 
+                 }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0%;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #E946DA;
+                    transform: translateX(-150%);
+                    transition: all .5s;
+                    @media screen and (max-width:992px) {
+                        background-color: transparent;
+                     }
+                }
+
+                &:hover::before{
+                    transform: translateX(-10%);
+                }
+            }
+
+            .nav-link { // bootstrap class
+                color: $navText;
+                margin: 0px 5px;
+                font-weight: 300;
+                @media screen and (max-width:992px) {
+                    margin: 5px 5px;
+                 }
+            }
+        }
+    }
+}

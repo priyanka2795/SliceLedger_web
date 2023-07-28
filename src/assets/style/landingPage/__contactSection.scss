@@ -1,0 +1,213 @@
+@import "../utility/colors.scss";
+
+@mixin formFields {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #5f1b5f;
+    padding: 5px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+@mixin formPlaceholder {
+    color: #ffffff;
+    font-weight: 200;
+}
+
+@mixin formFocus {
+    outline: none;
+    border-bottom: 1px solid #e946da;
+}
+
+@mixin anchor {
+    color: $commonText;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+.slice_contact_section {
+    // background-image: linear-gradient(45deg, #080834, rgba(3,22,100,.9)), url('../../images/form-bg.png');
+    // background-size: cover;
+    background-color: #07071c;
+    padding: 100px 0px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #080834;
+        z-index: -1;
+    }
+
+    .slice_contact_details {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .slice_contact_content {
+            .contact_us_text {
+                color: #e946da;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                text-align: left;
+            }
+
+            h2 {
+                // margin-left: auto;
+                margin-right: auto;
+                color: $commonText;
+                background: -webkit-linear-gradient(45deg, #e6e6e8, #ffffff);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                width: fit-content;
+                font-weight: 600;
+                font-size: 2.5em;
+                @media screen and (max-width:992px) {
+                    font-size: 2em;
+                }
+            }
+
+            hr {
+                color: #e946da;
+            }
+
+            p {
+                color: $commonText;
+                font-weight: 200;
+                font-size: 14px;
+            }
+
+            .slice_envelop {
+                display: flex;
+
+                svg {
+                    color: #e946da;
+                    margin-right: 10px;
+                }
+
+                a {
+                    @include anchor;
+                }
+            }
+
+            .slice_phone {
+                display: flex;
+
+                svg {
+                    color: #e946da;
+                    margin-right: 10px;
+                }
+
+                a {
+                    @include anchor;
+                }
+            }
+
+            .slice_location {
+                display: flex;
+
+                svg {
+                    color: #e946da;
+                    margin-right: 10px;
+                }
+
+                a {
+                    @include anchor;
+                }
+            }
+        }
+    }
+
+    .slice_get_in_touch_form {
+        padding: 40px 20px;
+        background-color: #12122c;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #da40db;
+
+        .form_name_field {
+            @include formFields;
+
+            &::placeholder {
+                @include formPlaceholder;
+            }
+
+            &:focus-visible {
+                @include formFocus;
+            }
+        }
+
+        .form_email_field {
+            @include formFields;
+
+            &::placeholder {
+                @include formPlaceholder;
+            }
+
+            &:focus-visible {
+                @include formFocus;
+            }
+        }
+
+        .form_subject_field {
+            @include formFields;
+
+            &::placeholder {
+                @include formPlaceholder;
+            }
+
+            &:focus-visible {
+                @include formFocus;
+            }
+        }
+
+        .form_message_field {
+            @include formFields;
+
+            &::placeholder {
+                @include formPlaceholder;
+            }
+
+            &:focus-visible {
+                @include formFocus;
+            }
+        }
+
+        .form_submit_field {
+            padding: 5px 30px;
+            background: linear-gradient(45deg, #9625e0, #e946da);
+            border-radius: 25px;
+            border: none;
+            color: #ffffff;
+            text-shadow: 0px 0px 15px #000;
+            letter-spacing: 0.8px;
+            transition: all 0.5s;
+
+            &:hover {
+                background: linear-gradient(45deg, #e946da, #9625e0);
+            }
+        }
+    }
+}
+
+.error_msg {
+    display: flex;
+    background: rgb(239 155 115);
+    color: #e30404;
+    padding: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.success_msg {
+    display: flex;
+    background: rgb(31 215 19 / 66%);
+    color: #ffffff;
+    padding: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,151 @@
+@import "../../utility/colors.scss";
+
+.slice_user_profileHome_section {
+    // float: left;
+    // width: 80%;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     @media (min-width:280px) and (max-width:767px){
+           height: auto;
+        }
+
+    .user_profileHome_container {
+        padding: 20px;
+        box-shadow: 0px 0px 15px 10px rgb(145 147 149 / 30%);
+        border-radius: 8px;
+        // @media screen and (max-width:992px){
+        //     margin-top: 600px;
+        // }
+        @media (min-width:992px) and (max-width:1024px){
+            margin-top: 143px;
+        }
+    }
+
+    .edit_profile_img{
+        position: relative;
+        
+    }
+    .profilePic{
+        margin-top: -54px;
+        width: 156px; 
+        height: 156px;
+    }
+    .wrapper{
+        position: absolute;
+        top: 23px;
+        left: -5px;
+        /* width:100%;
+        height:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center; */
+    }
+    .file-upload{
+        height:30px;
+        width:30px;
+        border-radius: 100px;
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items: center;  
+        border:1px solid #FFFFFF;
+        overflow:hidden;
+        background-image: linear-gradient(to bottom, #2590EB 50%, #FFFFFF 50%);
+        background-size: 100% 200%;
+        transition: all 1s;
+        color: #FFFFFF;
+        font-size:20px;
+      }
+        input[type='file']{
+          height:30px;
+          width:30px;
+          position:absolute;
+          top:0;
+          left:0;
+          opacity:0;
+          cursor:pointer;
+     }
+     input[type='file']:hover{
+          background-position: 0 -100%;
+          color:#2590EB;
+     }
+     .edit_profile_img img{
+        border-radius: 50%;
+        border: 3px solid #e1e3ea;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        @media (min-width:992px) and (max-width:1024px){
+            width: 125px;
+            height: 125px;
+            object-fit: cover;
+        }
+    }
+        .userProfile_img{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        .userProfile_img img{
+            width: 150px;
+            height: 150px;
+            border: 2px solid whitesmoke;
+            border-radius: 50%;
+            object-fit: cover;
+            @media (min-width:992px) and (max-width:1024px){
+                width: 125px;
+                height: 125px;
+            }
+        }
+       .personal_section{
+        .person_info_title{
+            display: flex;
+            justify-content: space-between;
+        }
+           .person_details{
+               margin-top: 20px;
+                .title{
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                .text{
+                    font-size: 14px;
+                    @media (min-width:992px) and (max-width:1024px){
+                        word-wrap: break-word;
+                    }
+                }
+                .user_email{
+                    @media (min-width:280px) and (max-width:320px){
+                        word-wrap: break-word;
+                    }
+                }
+           }
+           .errormsg{
+         color: red;
+           }
+       }
+       .account_section{
+           margin-top: 20px;
+        .account_details{
+        
+            margin-top: 20px;
+
+            .color{
+                color: #16C784;
+                font-weight: 500;
+                font-size: 16px !important;
+            }
+             .title{
+                 font-size: 14px;
+                 font-weight: 500;
+             }
+             .text{
+                 font-size: 14px;
+             }
+        }
+    }
+    
+}

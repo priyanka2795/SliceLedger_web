@@ -1,0 +1,30 @@
+
+
+.slice_user_account_setting{
+    .user_account_setting_div{
+        box-shadow:0px 0px 15px 10px rgb(145 147 149 / 30%);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 40px 0px;
+    }
+    .nav {
+        cursor: pointer;
+    }
+    .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #666e7b;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        border-bottom: 2px solid #08c18d;
+        color: #08c18d;
+        background-color: #ffffff;
+        font-weight: 600;
+    }
+    .nav-pills .nav-link {
+        font-size: 14px;
+        background: 0 0;
+        border: 0;
+        border-radius: 0px;
+    }
+}

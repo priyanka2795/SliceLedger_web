@@ -1,0 +1,423 @@
+@mixin slice_input {
+    padding: 9px;
+    margin-top: 5px;
+}
+@mixin slice_input_focus {
+    border-color: #d1d1d1;
+    box-shadow: none !important;
+}
+@mixin slice_input_placeholder {
+    font-size: 13px;
+}
+@mixin slice_transfer_btn {
+    background-color: #08c18d;
+    border: 1px solid #08c18d;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    margin: 15px 0px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.internal_transfer_section {
+    float: left;
+    width: 80%;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    .internal_transfer_content {
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+        .total_wallet_balance_div {
+            .total_wallet_balance_title {
+                color: #605e5e;
+                font-size: 14px;
+            }
+            .total_wallet_balance {
+                font-size: 1.5rem;
+                font-weight: 500;
+                span {
+                    color: gray;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .transfer_token_btn {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: flex-end;
+            .transfer_btn {
+                margin-top: 5px;
+                button {
+                    background: transparent;
+                    border: 1px solid black;
+                    border-radius: 3px;
+                    font-size: 13px;
+                    padding: 7px 9px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .searchDiv{
+            input{
+                height: 30px;
+                &:focus{
+                    border-color: 1px solid gray !important;
+                    box-shadow: none;
+                }
+            }
+            button{
+                height: 30px;
+                color: #fff;
+                background-color: #5965f9;
+            }
+        }
+        .transfer_history {
+            margin-top: -20px;
+            @media screen and (max-width:992px){
+                margin-top: 0px;
+            }
+            .title {
+                color: #605e5e;
+                font-size: 14px;
+            }
+            .transfer_slice_history_table {
+                table {
+                    thead {
+                        tr {
+                            th {
+                                font-size: 13px;
+                                color: gray;
+                                font-weight: 500;
+                                width: 12%;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                .token_name_details {
+                                    display: flex;
+                                    gap: 7px;
+                                    .token_image {
+                                        img {
+                                            width: 28px;
+                                            @media (min-width:280px) and (max-width:767px){
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                    .token_name {
+                                        font-weight: 500;
+                                        font-size: 15px;
+                                    }
+                                }
+
+                                .quantity {
+                                    font-size: 15px;
+                                    color: #5e5e5e;
+                                }
+                                .fromAddress {
+                                    font-size: 15px;
+                                    color: #5e5e5e;
+                                    width: 120px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                                .toAddress {
+                                    font-size: 15px;
+                                    color: #5e5e5e;
+                                    width: 120px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: flex;
+                                    svg {
+                                        font-size: 1.2rem;
+                                        color: #6c6cee;
+                                        cursor: pointer;
+                                    }
+                                }
+                                .date {
+                                    font-size: 15px;
+                                    span {
+                                        font-size: 13px;
+                                    }
+                                }
+                                .status_completed {
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    color: #23a023;
+                                    text-transform: capitalize;
+                                }
+                                .status_failed {
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    color: #dc3545;
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// =============transfer slice modal css start===========
+.transfer_slice_modal {
+    .modal-body {
+        padding: 0rem;
+        .transfer_close_btn {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+        .transfer_slice_div {
+            background-color: #fff;
+            padding: 5px 40px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            .title {
+                font-size: 20px;
+                color: #5965f9;
+                font-weight: 600;
+                text-align: center;
+            }
+            .total_slice {
+                text-align: center;
+                margin-top: 10px;
+                color: gray;
+                font-size: 15px;
+                span {
+                    color: #000;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+            .transfer_slice_input {
+                margin-top: 20px;
+                .wallet_address_input {
+                    input {
+                        @include slice_input;
+                        &:focus {
+                            @include slice_input_focus;
+                        }
+                        &::-webkit-input-placeholder {
+                            @include slice_input_placeholder;
+                        }
+                    }
+                }
+                .slice_input {
+                    input {
+                        @include slice_input;
+                        &:focus {
+                            @include slice_input_focus;
+                        }
+                        &::-webkit-input-placeholder {
+                            @include slice_input_placeholder;
+                        }
+                    }
+                }
+                .slice_transfer_btn {
+                    .sendOtp_continue_btn {
+                        @include slice_transfer_btn;
+                    }
+                    .verifyOtp_transferToken_btn {
+                        @include slice_transfer_btn;
+                    }
+                }
+                .slice_otp_input {
+                    input {
+                        @include slice_input;
+                        &:focus {
+                            @include slice_input_focus;
+                        }
+                        &::-webkit-input-placeholder {
+                            @include slice_input_placeholder;
+                        }
+                    }
+                    .resend_otp_btn {
+                        display: flex;
+                        justify-content: flex-end;
+                        font-size: 15px;
+                        color: #5965f9;
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slice_content {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+
+    .sliceWallet_total_balance {
+        margin-top: 20px;
+        margin-bottom: 13px;
+
+        .sliceWallet_total_title {
+            display: flex;
+
+            svg {
+                font-size: 1.5em;
+                margin: 0px 5px 1px 1px;
+                // color: #596882;
+            }
+
+            h6 {
+                letter-spacing: 0px;
+                // color: #596882;
+                font-size: 17px;
+            }
+        }
+
+        .sliceWallet_total_value {
+            margin-left: 32px;
+
+            h6 {
+                letter-spacing: 0px;
+                margin-bottom: 0px;
+                font-weight: 500;
+                font-size: 22px;
+                color: #f55110;
+            }
+
+            .sliceWallet_total_value_text {
+                font-weight: bold;
+                color: #000;
+                font-size: 18px;
+            }
+        }
+    }
+    .transfer_btn {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-end;
+        margin-top: 19px;
+
+        @media screen and (max-width:992px){
+            margin-top: 7px;
+            margin-bottom: 12px;
+        }
+
+        .token_btn {
+            background: transparent;
+            border: 1px solid black;
+            border-radius: 3px;
+            font-size: 13px;
+            padding: 7px 9px;
+            font-weight: 500;
+        }
+    }
+}
+// =============transfer slice modal css start===========
+.share_slice_modal {
+    .modal-body {
+        padding-top: 0rem;
+        .share_close_btn {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+        .share_slice_div {
+            background-color: #fff;
+            padding: 5px 40px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            .share_address_title {
+                font-size: 20px;
+                color: #5965f9;
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .qr_img {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                img {
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+            .available_walletBalance {
+                text-align: center;
+                color: gray;
+                margin-bottom: 5px;
+                span {
+                    color: #198754;
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+            }
+            .available_sliceBalance {
+                text-align: center;
+                color: gray;
+                span {
+                    color: #e24716;
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+            }
+            .wallet_address {
+                margin-top: 20px;
+                display: flex;
+                padding: 5px;
+                justify-content: center;
+                .address {
+                    background: #eeeeee;
+                    padding: 6px;
+                    overflow: hidden;
+                    margin-bottom: 0rem;
+                }
+                .copy_btn {
+                    margin-bottom: 0rem;
+                    padding: 6px;
+                    background: #5965f9;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// =============transfer slice modal success css start===========
+.transferSuccessModal {
+    .transfer_success_div {
+        .transfer_image {
+            img {
+                width: 160px;
+                height: 160px;
+                object-fit: cover;
+            }
+        }
+        .transferMsg_head {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: gray;
+        }
+        .transfer_btn {
+            .transfer_internalBtn {
+                background: transparent;
+                border: 1px solid black;
+                border-radius: 3px;
+                font-size: 13px;
+                padding: 7px 9px;
+                font-weight: 500;
+            }
+        }
+    }
+}

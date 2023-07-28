@@ -1,0 +1,513 @@
+.main-section{
+    width: 100%;
+    // height: 100vh;
+}
+
+
+
+
+.slice_dashHome_section{
+    // float: left;
+    // width: 80%;
+    // height: 100vh
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    
+                padding: 25px 0px 0px 0px;
+                background-color: #e4e3ef;
+
+                .slice_token_container{
+                    // margin-bottom: 17px;
+                    padding: 20px;
+    //                 display: flex;
+    // justify-content: space-between;
+    background: white;
+    box-shadow: 5px 7px 12px -5px #9f9fbb;
+                }
+
+    .slice_token_details{
+
+
+        .token_details_head{
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+            img{
+                width: 30px;
+                margin-right: 10px;
+            }
+
+            h2{
+                margin-bottom: 0px;
+                margin-right: 10px;
+                letter-spacing: 0px;
+            }
+
+            span{
+                font-size: 14px;
+                font-weight: bold;
+                color: grey;
+            }
+        }
+
+        .token_details_head_info{
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+
+            .token_rank{
+                background-color: #808A9D;
+                border-radius: 4px;
+                padding: 2px 4px;
+                color: #ffffff;
+                margin-right: 10px;
+                font-size: 10px;
+            }
+
+            .token_rank_coinTxt{
+                margin-right: 10px;
+            }
+            
+        }
+    }
+
+    .slice_token_price_details{
+        text-align: end;
+
+        .slice_token_tag{
+            font-size: 12px;
+            color: grey;
+            letter-spacing: 0px;
+            font-weight: bold;
+        }
+
+        .price_value{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            h2{
+                margin-bottom: 0px;
+                margin-right: 10px;
+            }
+
+            .token_increment{
+                background-color: #16C784;
+                padding: 5px 10px;
+                border-radius: 5px;
+                color: $commonText;
+                font-size: 13px;
+            }
+        }
+
+        .compare_value{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .compare_token{
+                margin-right: 10px;
+                font-size: 13px;
+                font-weight: bold;
+                color: #808A9D;
+            }
+
+            .token_decrement{
+                color: #EA3943;
+                font-size: 13px;
+            }
+        }
+
+        .price_data{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 12px;
+
+            .low_price_data{
+                margin-right: 10px;
+            }
+
+            .price_data_progressBar{
+
+                .progress{ //bootstrap class
+                    height: 6px;
+                    border-radius: 2px;
+                    width: 100px;
+                    .progress-bar{ //bootstrap class
+                        width: 60px;
+                    }
+                }
+            }
+
+            .high_price_data{
+                margin: 0px 10px;
+            }
+
+            .hour_data{
+                
+                .dropdown{
+
+                    button{
+                        border: none;
+                        padding: 0px;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .slice_buy_sell_btn{
+            display: flex;
+            justify-content: flex-end;
+
+            .buy_btn{
+                background-color: #16C784;
+                padding: 5px 20px;
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            .sell_btn{
+                border: 1px solid #16C784;
+                padding: 5px 20px;
+                color: #000;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .slice_token_value_table{
+        margin-top: 17px;
+        padding: 12px;
+        background: white;
+        box-shadow: 5px 7px 12px -5px #9f9fbb;
+
+        .head{
+            border-bottom: 1px solid #edecf7!important;
+            h6{
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 20px 0px 0px 20px;
+            }
+            p{
+                padding-left: 20px;
+                font-size: 12px;
+            }
+        }
+
+        .token_details{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #edecf7!important;
+
+            .slice_market_cap_title{
+                p{
+                    color: #656363;
+                    font-size: 13px;
+                    font-weight: 500;
+                    padding: 12px 0px 0px 18px;
+                }
+            }
+            .slice_market_cap_value{
+                .market_cap_numbers{
+                    font-size: 13px;
+                    padding: 12px 18px 0px 0px;
+                }
+            }
+        }
+
+                .slice_market_cap_value{
+
+                    .market_cap_variation{
+                        color: #16C784;
+                        font-weight: bold;
+                        font-size: 13px;
+
+                        svg{
+                            color: #16C784;
+                        }
+                    }
+                }
+
+                .slice_market_cap_value.circulating_supply{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            
+        
+    }
+
+    .slice_market_value_graph{
+        margin-top: 17px;
+        min-height: 235px;
+        background: white;
+        box-shadow: 5px 7px 12px -5px #9f9fbb;
+      
+    .market_value_head{
+        border-bottom: 1px solid #edecf7;
+        h5{
+            font-weight: 700;
+            color: #1c273c;
+            font-size: 14px;
+            text-transform: uppercase;
+           padding: 20px 0px 10px 20px; 
+        }
+    }
+    .market_graph{
+        .recharts-wrapper{
+            @media (min-width:270px) and (max-width:280px){
+                width: 257px !important;
+            }
+            @media (min-width:300px)and (max-width:767px) {
+                width: 298px !important;
+            }
+            @media (min-width:767px) and (max-width:992px) {
+                width: 440px !important;
+            }
+            .recharts-surface{
+                @media (min-width:270px) and (max-width:280px){
+                    width: 250px !important;
+                }
+                @media (min-width:300px) and (max-width:767px) {
+                    width: 294px;
+                } 
+                @media (min-width:767px) and (max-width:992px) {
+                    width: 440px ;
+                }
+            }
+        }
+    }
+    }
+
+    .slice_transaction_head{
+        margin-top: 17px;
+       h5{
+        font-size: 14px;
+        font-weight: 700;
+        color: #1c273c;
+       }
+    }
+
+    .slice_buy_sell_section{
+                padding: 15px;
+                background: white;
+                box-shadow: 5px 7px 12px -5px #9f9fbb;
+
+                .slice_buy_sell_head{
+                    h6{
+                        border-bottom: 1px solid #edecf7!important;
+                        margin-left: 12px;
+                        padding-bottom: 10px;
+                    }
+                }
+
+        .nav-tabs.slice_list_tabs{//bootstrap class
+
+            .nav-item{//bootstrap class
+                width: 50%;
+
+                button.nav-link{
+                    width: 100%;
+                    color: #000;
+                    font-weight: 600;
+
+                    &:active{
+                        border-top: 4px solid #16c784;
+                        background-color: #ebebeb;
+                    }
+
+                    &:hover{
+                        border-color: transparent;
+                    }
+                }
+
+                button.nav-link.active{
+                    border-top: 4px solid #16c784;
+                    background-color: #ebebeb;
+                }
+            }
+        }
+
+        .tab-content{
+            background: #ebebeb;
+            border-bottom: 2px solid #000;
+            padding: 10px;
+        }
+
+        .slice_buy_list_ul{
+                list-style-type: none;  
+                padding: 0%;
+
+                // .slice_buy_list_li{
+
+                //     &:nth-child(even){
+                //         background-color: #e1e1e1;
+                //     }
+                // }
+
+            .token_details{
+                // border: 1px solid #000;
+                display: flex;
+                justify-content: space-between;
+
+                .token_name_details{
+                    display: flex;
+                    align-items: center;
+
+                    .token_image{
+                            padding: 10px;
+
+                        img{
+                            width: 30px;
+                        }
+                    }
+
+                    .token_name{
+                        display: flex;
+                        flex-direction: column;
+
+                        .token_name_text{
+                            letter-spacing: 0px;
+                            font-weight: 500;
+                            font-size: 14px;
+                        }
+
+                        .token_name_date{
+                            font-size: 11px;
+                            color: #808A9D;
+                        }
+                    }
+                }
+
+                .token_value_details{
+                            padding: 10px;
+
+                    .token_quantity{
+                            letter-spacing: 0px;
+                            font-size: 11px;
+                            text-align: end;
+
+                        .token_quantity_text{
+                            font-weight: 500;
+                        }
+
+                        .token_quantity_value{
+                            color: #808A9D;
+                        }
+                    }
+
+                    .token_price{
+                            letter-spacing: 0px;
+                            font-size: 11px;
+                            text-align: end;        
+                            margin: 4px 0px;
+                            color: #00aa6a;
+                            
+                        .token_price_text{
+                            font-weight: 500;
+                        }
+
+                    }
+
+                    .token_price.sell_text{
+                            color: #EA3943;
+                    }
+
+                    .token_total{
+                            font-size: 13px;
+                            text-align: end;
+                            border-top: 1px solid #808A9D;
+                            
+                        .token_total_text{
+                            font-weight: 500;
+                        }
+
+                        .token_total_value{
+                            color: #808A9D;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .transaction_detail_table{
+        margin-bottom: 50px;
+        padding: 30px;
+        background: white;
+        box-shadow: 5px 7px 12px -5px #9f9fbb;
+
+        .title_head{
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .head{
+            font-size: 13px;
+        }
+        button{
+            background: transparent;
+            font-size: 11px;
+            border: none;
+            color: #5965f9;
+        }
+
+        .amount_text{
+            font-weight: 500;
+            font-size: 13px;
+        }
+        .quantity{
+            font-weight: 500;
+            font-size: 13px;
+        }
+        .status_rejected{
+            background-color: #ff5959;
+            border-radius: 5px;
+            padding: 1px 10px;
+            color: #ffffff;
+            font-size: .60em;
+            width: 95%;
+            text-align: center;
+        }
+        .status_completed{
+            background-color: #08c18d;
+            border-radius: 5px;
+            padding: 1px 10px;
+            color: #ffffff;
+            font-size: .60em;
+            width: 95%;
+            text-align: center;
+        }
+        .date_time{
+            font-weight: 500;
+            font-size: 13px;
+        }
+    }
+}
+
+
+
+.more_details {
+    background-image: linear-gradient(135deg, #435fe0, #764ba2);
+    color: #fff;
+    padding: 5px 15px;
+    float: right;
+    margin-bottom: 22px; 
+    margin-top: -10px;
+    border: none;
+    letter-spacing: 0px;
+    border-radius: 5px;
+    text-decoration: none !important;
+}
+
+.more_details:hover {
+    color: #ffffff !important;
+    background-image: linear-gradient(135deg, #2f4fe3, #7b32c7);
+    text-decoration: none !important;
+}
+
+        

@@ -1,0 +1,10 @@
+<?php
+
+return [
+
+    'CONTRACT_ADDRESS'=>"0xc1bac8d2bf9e2bd65fae82f1061d4ab2ff3c29a0",
+    'OWNER_ADDRESS'=>"0xAA737Df2b2C4175205Af4644cb4e44d7b9CeE5D4",
+    'METAMASK_API_KEY'=>"f6e4d7f9-d71e-4b50-98e0-c6e31d312147",
+]
+
+?>

@@ -1,0 +1,434 @@
+@mixin btn($bg, $border, $text) {
+    background-color: $bg;
+    border: 1px solid $border;
+    padding: 10px 20px;
+    color: $text;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    margin: 0px 4px;
+    border-radius: 3px;
+}
+
+.sliceWallet_section {
+    float: left;
+    width: 80%;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+
+    .slice_content {
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+
+        .sliceWallet_total_balance {
+            margin-top: 20px;
+            margin-bottom: 13px;
+
+            .sliceWallet_total_title {
+                display: flex;
+
+                svg {
+                    font-size: 1.5em;
+                    margin: 0px 5px 1px 1px;
+                    // color: #596882;
+                }
+
+                h6 {
+                    letter-spacing: 0px;
+                    // color: #596882;
+                    font-size: 17px;
+                }
+            }
+
+            .sliceWallet_total_value {
+                margin-left: 32px;
+
+                h6 {
+                    letter-spacing: 0px;
+                    margin-bottom: 0px;
+                    font-weight: 500;
+                    font-size: 22px;
+                    color: #f55110;
+                }
+                
+
+                .sliceWallet_total_value_text {
+                    font-weight: bold;
+                    color: #000;
+                    font-size: 18px;
+                }
+            }
+        }
+        .buy_sell_btn {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: flex-end;
+            margin-top: 19px;
+
+            .buyToken_btn {
+                background: transparent;
+                border: 1px solid black;
+                border-radius: 3px;
+                font-size: 13px;
+                padding: 7px 9px;
+                font-weight: 500;
+                // &:hover{
+                //     background-color: #111;
+                //     color: #fff;
+                // }
+            }
+            .sellToken_btn {
+                background: transparent;
+                border: 1px solid black;
+                border-radius: 3px;
+                font-size: 13px;
+                padding: 7px 9px;
+                font-weight: 500;
+            }
+        }
+        .buy_sell_history {
+            color: #605e5e;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .buy_sell_history_table {
+            table {
+                
+                thead {
+                    tr {
+                        th {
+                            font-size: 13px;
+                            color: gray;
+                            font-weight: 500;
+                            width: 12%;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            .token_name_details {
+                                display: flex;
+                                gap: 7px;
+                                .token_image {
+                                    img {
+                                        width: 28px;
+                                        @media screen and (max-width:767px) {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                .token_name {
+                                    font-weight: 500;
+                                    font-size: 15px;
+                                }
+                            }
+                            .coin_received{
+                                font-size: 15px;
+                                color: #5e5e5e;
+                            }
+                            .price_applied{
+                                font-size: 15px;
+                                color: #5e5e5e;
+                            }
+                            .amount{
+                                font-size: 15px;
+                                color: #5e5e5e;
+                            }
+                            .type{
+                                font-size: 15px;
+                                color: #5e5e5e;
+                            }
+                            .date{
+                                font-size: 15px;
+                                span{
+                                    font-size: 13px;
+                                }
+                            }
+                            .status_completed{
+                                font-size: 15px;
+                                font-weight: 500;
+                                color: #23a023;
+                                text-transform: capitalize;
+                            }
+                            .status_failed{
+                                font-size: 15px;
+                                font-weight: 500;
+                                color: #dc3545;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ==============buy modal css============
+.buyModal {
+    .modal-body {
+        padding: 0rem;
+    }
+    .buy_close_btn{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .slice_buy_sell_wallet {
+        // border: 1px solid #f1f1f1;
+        background-color: #fff;
+        padding: 10px 40px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #e0e0e0;
+
+        .buy_sell_wallet_subHead {
+            font-size: 20px;
+            color: #5965f9;
+            font-weight: 600;
+        }
+        .buyToken_balance {
+            display: flex;
+            font-size: 17px;
+            margin-top: 10px;
+            color: #e2680e;
+            justify-content: center;
+        }
+
+        .buy_sell_input_field {
+            margin-top: 8px;
+            label {
+                font-size: 13px;
+                color: #596882;
+                padding-bottom: 4px;
+            }
+            .amount_input {
+                input {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    height: 40px;
+                    padding: 21px;
+
+                    &::-webkit-inner-spin-button {
+                        display: none;
+                    }
+
+                    &:focus {
+                        border-color: #ced4da;
+                        box-shadow: none;
+                    }
+                }
+                .input-group-text {
+                    border-radius: 0rem;
+                    font-size: 14px;
+                    color: #596882;
+                    width: 80px;
+                    height: 40px;
+                    background-color: transparent;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    padding: 21px;
+                }
+            }
+            .slice_balance_div {
+                .text {
+                    font-size: 12px;
+                    color: gray;
+                    margin-bottom: 0rem;
+                }
+                .slice_balance {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        font-size: 13px;
+                        font-weight: 500;
+                        margin-bottom: 0.3rem;
+                         span{
+                            color: #f55110;
+                         }
+                    }
+                }
+            }
+        }
+    }
+    .pay_balance_div {
+        display: flex;
+        justify-content: center;
+        gap: 11px;
+        font-size: 14px;
+    }
+    .buy_sell_wallet_Btn {
+        display: flex;
+        padding: 0px 40px 20px 40px;
+
+        .buy_sell_btn {
+            @include btn(#08c18d, #08c18d, #ffffff);
+        }
+        .sell_btn {
+            @include btn(#5965f9, #5965f9, #ffffff);
+        }
+    }
+    .wallet_balance {
+        background: #435fe0;
+        padding: 10px 40px;
+        .title {
+            font-size: 13px;
+            color: #ffffffe3;
+        }
+        .balance {
+            color: #fff;
+            font-weight: 500;
+            font-size: 22px;
+            span {
+                color: #e6e6e6;
+            }
+        }
+    }
+}
+
+// ==============sell modal css============
+.sellModal {
+    .modal-body {
+        padding: 0rem;
+    }
+    .sell_close_btn{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .slice_buy_sell_wallet {
+        // border: 1px solid #f1f1f1;
+        background-color: #fff;
+        padding: 10px 40px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #e0e0e0;
+
+        .buy_sell_wallet_subHead {
+            font-size: 20px;
+            color: #5965f9;
+            font-weight: 600;
+        }
+        .buyToken_balance {
+            display: flex;
+            font-size: 17px;
+            margin-top: 10px;
+            color: #e2680e;
+            justify-content: center;
+        }
+
+        .buy_sell_input_field {
+            margin-top: 8px;
+            label {
+                font-size: 13px;
+                color: #596882;
+                padding-bottom: 4px;
+            }
+            .amount_input {
+                input {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    height: 40px;
+                    padding: 21px;
+
+                    &::-webkit-inner-spin-button {
+                        display: none;
+                    }
+
+                    &:focus {
+                        border-color: #ced4da;
+                        box-shadow: none;
+                    }
+                }
+                .input-group-text {
+                    border-radius: 0rem;
+                    font-size: 14px;
+                    color: #596882;
+                    width: 80px;
+                    height: 40px;
+                    background-color: transparent;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    padding: 21px;
+                }
+            }
+            .slice_balance_div {
+                .text {
+                    font-size: 12px;
+                    color: gray;
+                    margin-bottom: 0rem;
+                }
+                .slice_balance {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        font-size: 13px;
+                        font-weight: 500;
+                        margin-bottom: 0.3rem;
+                         span{
+                            color: #f55110;
+                         }
+                    }
+                }
+            }
+        }
+    }
+    .pay_balance_div {
+        display: flex;
+        justify-content: center;
+        gap: 11px;
+        font-size: 14px;
+    }
+    .buy_sell_wallet_Btn {
+        display: flex;
+        padding: 0px 40px 20px 40px;
+
+        .buy_sell_btn {
+            @include btn(#08c18d, #08c18d, #ffffff);
+        }
+        .sell_btn {
+            @include btn(#dc3545, #dc3545, #ffffff);
+        }
+    }
+    .wallet_balance {
+        background: #435fe0;
+        padding: 10px 40px;
+        .title {
+            font-size: 13px;
+            color: #ffffffe3;
+        }
+        .balance {
+            color: #fff;
+            font-weight: 500;
+            font-size: 22px;
+            span {
+                color: #e6e6e6;
+            }
+        }
+    }
+}
+   /* ===================================================== Token Pagination styling ======================================================= */
+   .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #4a5cd8 !important;
+    border-color: #c3ccf3 !important;
+  }
+  
+   .page-link {
+    color: #131212 !important;
+    /* font-weight: 600; */
+  }
+  
+   .page-link:hover {
+    color: #131212 !important;
+  }
+  
+   .page-link:focus {
+    box-shadow: 0 0 0 0.25rem #c3ccf3 !important;
+  }

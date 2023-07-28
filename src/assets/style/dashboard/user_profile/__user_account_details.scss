@@ -1,0 +1,175 @@
+.slice_user_account_details{
+    float: left;
+    width: 80%;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .account_details_div{
+        padding: 40px;
+        box-shadow: 0px 0px 15px 10px rgb(145 147 149 / 10%);
+        border-radius: 8px;
+        margin: 40px 0px;
+        @media (min-width:280px) and (max-width:320px){
+            margin-top: 220px;
+        }
+        @media (min-width:650px) and (max-width:720px){
+            margin-top: 220px;
+        }
+
+        .head{
+            color: #1e1e1f;
+            font-size: 17px;
+        }
+        .text{
+            font-size: 14px;
+            padding-top: 10px;
+            color: #808a9d;
+        }
+
+        .account_number_fields{
+            .bank_name_div{
+                padding: 6px;
+                border: 1px solid #9f9a9a;
+                display: flex;
+                input{
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    resize: none;
+                    // color: #999999;
+    
+                    &:focus-within{
+                        resize: none;
+                        outline: none;
+                        // border-bottom: 1px solid aqua;
+                    }
+
+                    
+                }
+            }
+            
+            .account_number_div{
+                margin-top: 20px;
+                padding: 6px;
+                border: 1px solid #9f9a9a;
+                display: flex;
+
+                input{
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    resize: none;
+                    // color: #999999;
+    
+                    &:focus-within{
+                        resize: none;
+                        outline: none;
+                        // border-bottom: 1px solid aqua;
+                    }
+
+                    
+                }
+            }
+
+            .re-account_number_div{
+                margin-top: 20px;
+                padding: 6px;
+                border: 1px solid #9f9a9a;
+                display: flex;
+
+                input{
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    resize: none;
+                    // color: #999999;
+    
+                    &:focus-within{
+                        resize: none;
+                        outline: none;
+                        // border-bottom: 1px solid aqua;
+                    }
+
+                    
+                }
+            }
+
+            .ifsc_code_div{
+                margin-top: 20px;
+                padding: 6px;
+                border: 1px solid #9f9a9a;
+                display: flex;
+
+                input[type=text]{
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    // color: #999999;
+    
+                    &:focus-within{
+                        outline: none;
+                        // border-bottom: 1px solid aqua;
+                    }
+                }
+            }
+            .account_type_div{
+                margin-top: 20px;
+                padding: 6px;
+                border: 1px solid #9f9a9a;
+                display: flex;
+
+                select{
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    // color: #999999;
+    
+                    &:focus-within{
+                        outline: none;
+                        // border-bottom: 1px solid aqua;
+                    }
+                }
+            }
+
+            .warning_msg{
+                margin-top: 20px;
+                display: flex;
+
+                .icon{
+                    padding-right: 15px;
+                    font-size: 1.6rem;
+                }
+
+                p{
+                    font-size: 14px;
+                }
+            }
+            .account_details_btn{
+                .proceed_button{
+                    
+                        background-color: #08c18d;
+                        border: 1px solid #08c18d;
+                        padding: 6px 20px;
+                        color: #ffffff;
+                        text-decoration: none;
+                        width: 100%;
+                        text-align: center;
+                        margin: 15px 0px;
+                    
+                }
+            }
+
+            p.text_holder_name {
+                font-size: 19px;
+                text-align: center;
+                color: black;
+                  b{
+                    color: #5965f9;
+                  }
+            }
+          
+        }
+    }
+}

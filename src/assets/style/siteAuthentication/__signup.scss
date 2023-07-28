@@ -1,0 +1,223 @@
+@import "../utility/colors.scss";
+
+@mixin inputFields {
+    background: transparent;
+    border: none;
+    // border-bottom: 1px solid #999999;
+    padding-left: 25px;
+    color: #999999;
+}
+
+.slice_signUp_section {
+    // background-image: linear-gradient(45deg, #000000, rgba(0,0,0,.85)), url('../../images/form-bg.png');
+    // background-size: cover;
+    background-color: #01041c;
+    padding: 100px 0px;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (max-width: 420px) {
+        display: block;
+      }
+      @media only screen and (max-width:1440px){
+        height: auto;  
+      }
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        z-index: -1;
+    }
+
+    .signup_form_left_bg {
+        background-image: linear-gradient(269deg, #1b1b45, #151535);
+        color: #ffffff;
+
+        .slice_signup_form_left {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 50px;
+
+            img {
+                image-rendering: -webkit-optimize-contrast;
+            }
+        }
+    }
+
+    .signup_form_right_bg {
+        background-image: radial-gradient(at top, #1c1c46, #12122c);
+    }
+
+    .slice_signUp_form {
+        // background-image: radial-gradient(at top, #444444, #01041C);
+        padding: 70px;
+        // border-radius: 10px;
+        // border-bottom: 5px solid #00ffe1b4;
+        @media screen and (max-width: 900px) {
+            padding: 15px;
+          }
+
+        .slice_signUp_form_head {
+            color: #ffffff;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .slice_signUpForm {
+            .email_field_div {
+                background-color: #0a0d25;
+                line-height: 1;
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                padding: 8px 20px;
+                margin: 20px 0px;
+                svg {
+                    color: #999999;
+                    // margin-bottom: -24px;
+                }
+            }
+
+            .password_field_div {
+                background-color: #0a0d25;
+                line-height: 1;
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                padding: 8px 20px;
+                margin: 20px 0px;
+                svg {
+                    color: #999999;
+                    // margin-bottom: -24px;
+                }
+            }
+
+            .select_country_field_div {
+                background-color: #0a0d25;
+                line-height: 1;
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                padding: 8px 20px;
+                margin: 20px 0px;
+                svg {
+                    color: #999999;
+                    // margin-bottom: -30px;
+                }
+            }
+
+            .select_country_field_div {
+                select {
+                    background: transparent;
+                    border: none;
+                    // border-bottom: 1px solid #999999;
+                    padding-left: 25px;
+                    color: #6c7475;
+                    border-radius: 0px;
+
+                    option {
+                        background-color: #1d1e2d;
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+            input{
+                &::placeholder{
+                    @media (min-width:270px) and (max-width:280px){
+                        font-size: 12px;
+                    }
+                }
+            }
+            select{
+              
+                    @media (min-width:270px) and (max-width:280px){
+                        font-size: 12px;
+                    }
+                
+            }
+            input[type="text"] {
+                @include inputFields;
+
+                &:focus-within {
+                    outline: none;
+                    // border-bottom: 1px solid aqua;
+                }
+            }
+
+            input[type="tel"] {
+                @include inputFields;
+
+                &:focus-within {
+                    outline: none;
+                    // border-bottom: 1px solid aqua;
+                }
+            }
+
+            input[type="email"] {
+                @include inputFields;
+
+                &:focus-within {
+                    outline: none;
+                    // border-bottom: 1px solid aqua;
+                }
+            }
+
+            input[type="password"] {
+                @include inputFields;
+
+                &:focus-within {
+                    outline: none;
+                    // border-bottom: 1px solid aqua;
+                }
+            }
+
+            input[type="submit"] {
+                margin: 20px 0px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                padding: 5px 30px;
+                background: linear-gradient(45deg, #9625e0, #e946da);
+                border-radius: 25px;
+                border: none;
+                color: #ffffff;
+                text-shadow: 0px 0px 15px #000;
+                letter-spacing: 0.8px;
+                transition: all 0.5s;
+
+                &:hover {
+                    background: linear-gradient(45deg, #e946da, #9625e0);
+                }
+            }
+        }
+
+        .slice_signUp_form_foot {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                color: #999999;
+                font-weight: 400;
+                font-size: 14px;
+                text-decoration: none;
+                  span{
+                    color: #5965f9;
+                    font-weight: 600;
+                    text-decoration: underline;
+                  }
+            }
+        }
+    }
+}

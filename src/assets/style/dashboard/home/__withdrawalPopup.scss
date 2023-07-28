@@ -1,0 +1,243 @@
+.withdraw_modal {
+    .modal-dialog {
+        max-width: 660px;
+    }
+}
+.slice_withdrawal_section {
+    padding:0px 20px 20px 20px;
+    @media screen and (max-width:767px) {
+        padding: 0px 0px 20px 0px;
+    }
+      .close_btn{
+          display: flex;
+          justify-content: flex-end;
+      }
+
+    .withdraw_head {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        .withdrawal_title {
+            font-weight: bold;
+            font-size: 19px;
+        }
+        .withdrawal_Balance {
+            font-weight: bold;
+            color: #808a9d;
+            text-align: right;
+            .price {
+                color: #ec890ed1;
+            }
+            .text {
+                font-size: 13px;
+                font-weight: 400;
+                color: gray;
+            }
+        }
+    }
+    .withdrawal_message {
+        margin-top: 20px;
+        font-size: 13px;
+        color: gray;
+    }
+
+    .withdrawal_account_details {
+        // display: flex;
+        // justify-content: center;
+        // text-align: left;
+        font-size: 12px;
+        margin: 20px 0px;
+        table {
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+    }
+    .withdrawal_minimum_text {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background: #ffefcc63;
+        color: #f29f27;
+        padding: 12px 10px;
+        font-size: 12px;
+        border-radius: 4px;
+        svg {
+            font-size: 1rem;
+        }
+    }
+
+    .withdrawal_amount {
+        .withdrawal_amount_text {
+            font-weight: 500;
+            letter-spacing: 0px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #797777;
+        }
+        .withdrawal_amount_percent {
+           
+            ul{
+                display: flex;
+                gap: 15px;
+                margin-bottom: 17px;
+                margin-top: 10px;
+                margin-left: -25px;
+                list-style: none;
+                .active{
+                    background-color: #8f96e6;
+                    color: #fff !important;
+                    font-weight: 500;
+                    border-radius: 5px;
+                  }
+            
+                  li{
+                    
+                    .amount_percent {
+                        background: rgb(193 193 193 / 55%);
+                        padding: 5px 17px;
+                        font-size: 13px;
+                        color: #000;
+                        border-radius: 5px;
+                        border: none;
+                         &:hover{
+                             background-color: #8f96e6;
+                             color: #fff;
+                             font-weight: 500;
+                         }
+                    }
+                  }
+               
+            }
+        }
+
+        .withdrawal_amount_input {
+            display: flex;
+
+            input {
+                padding: 10px 5px;
+                border: none;
+                border-radius: 2px;
+                background: #d6d6d6;
+
+                &::-webkit-inner-spin-button {
+                    display: none;
+                }
+            }
+            .btn-success {
+                background-color: #08c18d;
+                border-color: #08c18d;
+
+                @media screen and (max-width:340px){
+                    font-size: 13px;
+                  }
+
+                &:hover {
+                    background-color: #08c18d !important;
+                    border-color: #08c18d !important;
+                }
+
+                &:focus {
+                    box-shadow: 0 0 0 0.25rem rgb(38 224 138 / 50%);
+                }
+            }
+        }
+    }
+}
+
+.slice_otp_div {
+    .otp_content {
+        .text {
+            margin-top: 20px;
+            background: #ebfbeb;
+            color: green;
+            text-align: center;
+            padding: 30px;
+            font-size: 16px;
+            border: 1px solid green;
+            border-radius: 5px;
+        }
+        input {
+            margin-top: 0px;
+            width: 100%;
+            padding: 10px 5px;
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 2px;
+            background: rgba(214, 214, 214, 0.431372549);
+
+            &::-webkit-inner-spin-button {
+                display: none;
+            }
+
+            &::placeholder {
+                text-align: center;
+            }
+
+            &:focus-within {
+                outline: none;
+                border: 1px solid #555;
+            }
+        }
+        .otp_btns {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+
+            .btn-success {
+                background-color: #08c18d;
+                border-color: #08c18d;
+
+                &:hover {
+                    background-color: #08c18d !important;
+                    border-color: #08c18d !important;
+                }
+
+                &:focus {
+                    box-shadow: 0 0 0 0.25rem rgb(38 224 138 / 50%);
+                }
+            }
+            .resend_btn {
+                background-color: #435fe0;
+                color: #fff;
+
+                &:focus {
+                    box-shadow: 0 0 0 0.25rem rgba(54, 131, 213, 0.5);
+                }
+            }
+        }
+    }
+}
+
+// ===============Bank Details css start====================
+.paymentWithdraw_section {
+    padding: 20px;
+    .withdraw_head {
+        font-size: 1.6rem;
+        color: gray;
+    }
+    .withdraw_amount {
+        font-size: 23px;
+        font-weight: 700;
+        padding: 12px 0px 8px 0px;
+    }
+    .text1 {
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+    .text2 {
+        font-size: 14px;
+        color: #f05454;
+        font-weight: bold;
+    }
+    .wallet_btn {
+        margin-top: 20px;
+        .wallet_inrBtn {
+            background: transparent;
+            border: 1px solid black;
+            border-radius: 3px;
+            font-size: 13px;
+            padding: 7px 9px;
+            font-weight: 500;
+        }
+    }
+}

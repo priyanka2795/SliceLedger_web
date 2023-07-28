@@ -1,0 +1,110 @@
+@import '../utility/colors.scss'; 
+
+.slice_team_section{
+            // background-image: linear-gradient(45deg, #080834, rgba(0,33,126,.9)), url('../../images/roadmap.jpg');
+            // background-size: cover;
+            background: #07071c;
+            padding: 100px 0px;
+
+    .slice_team_Head{
+
+        .our_team_text{
+            color: #E946DA;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        h2{
+            margin-left: auto;
+            margin-right: auto;
+            color: $commonText;
+            background: -webkit-linear-gradient(45deg, #e6e6e8, #ffffff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: fit-content;
+            font-weight: 600;
+            font-size: 2.5em;
+            @media screen and (max-width:992px) {
+                font-size: 2em;
+            }
+        }
+
+        hr{
+            color: #E946DA;
+            margin-bottom: 40px;
+        }
+    }
+
+    .slice_team_carousel{
+
+        .slice_team_member{
+            // border: 1px dashed #E946DA;
+            border-radius: 5px;
+            padding: 20px 20px 40px 20px;
+            box-shadow: 0px 0px 5px #E946DA;
+            background-color: #0f1123;
+            margin: 10px 0px;
+
+            .team_member_pic{
+                display: flex;
+                justify-content: flex-start;
+                padding: 10px;
+
+                img{
+                    width: 70px;
+                    border-radius: 50%;
+                    border: 2px solid #005299;
+                }
+            }
+
+            .team_member_details{
+                text-align: left;
+                color: $commonText;
+
+                .member_description{
+                    color: #f2f2f2;
+                    font-size: 14px;
+                    font-weight: 200;
+                }
+
+                .member_title{
+                    color: #797988;
+                    font-style: italic;
+                }
+            }
+
+            .team_member_social{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+
+                a{
+                    background: #07071c;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover{
+                        box-shadow: 0px 0px 5px rgb(219 65 219 / 100%);
+                    }
+                }
+
+                a:hover svg{
+                    color: rgb(219 65 219 / 100%);
+
+                    }
+                
+                svg{
+                    color: rgb(255 255 255 / 35%);
+
+
+                }
+            }
+        }
+    }
+}
